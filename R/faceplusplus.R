@@ -18,9 +18,12 @@ getDetect <- function(file, secret=options()$FACEPP_SECRET, key=options()$FACEPP
 }
 
 #' @export
-photo2AgefromMac <- function(){
-  old <- setwd("~/Pictures/iPhoto Library.photolibrary/Masters/")
-  f <- file.choose()
-  setwd(old)
+photo2AgefromMac <- function(auto=TRUE, dir="~/photos"){
+  if(auto){
+    fs <- list.files(dir, full.names=TRUE)
+    f <- fs[which.max(file.info(fs)$mtime)]
+  } else{
+    f <- file.choose()
+  }
   res <- getDetect(f)
 }
