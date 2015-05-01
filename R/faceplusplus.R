@@ -1,3 +1,4 @@
+#' @export
 getDetect <- function(file, secret=options()$FACEPP_SECRET, key=options()$FACEPP_KEY){
   require("httr")
   if(grepl("^http|^https", file)){
@@ -16,6 +17,7 @@ getDetect <- function(file, secret=options()$FACEPP_SECRET, key=options()$FACEPP
   return(res$face)
 }
 
+#' @export
 photo2AgefromMac <- function(){
   old <- setwd("~/Pictures/iPhoto Library.photolibrary/Masters/")
   f <- file.choose()
