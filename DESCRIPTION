@@ -1,9 +1,8 @@
 Package: faceplusplus
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: get Data from faceplusplus
+Version: 0.1
 Date: 2015-05-01
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: dichika
+Description: get Data from faceplusplus
+License: MIT
