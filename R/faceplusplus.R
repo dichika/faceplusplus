@@ -13,7 +13,7 @@ getDetect <- function(file, secret=options()$FACEPP_SECRET, key=options()$FACEPP
     res <- httr::POST(u, body=list(img=httr::upload_file(file)))    
   }
   res <- httr::content(res, as="text")
-  res <- jsonlite::fromJSON(res)
+  res <- jsonlite::fromJSON(res, flatten = TRUE)
   return(res$face)
 }
 
